@@ -4,7 +4,6 @@
     username = "szymon";
     homeDirectory = "/Users/szymon";
     packages = [ ];
-    file."/.tmux.conf" = { source = ./dotfiles/.tmux.conf; };
     file."/.config/ghostty/config" = { source = ./dotfiles/.config/ghostty/config; };
     file."/.config/neofetch/config.conf" = { source = ./dotfiles/.config/neofetch/config.conf; };
     file."/.config/starship.toml" = { source = ./dotfiles/.config/starship.toml; };
