@@ -40,6 +40,28 @@
       credential.helper = "manager";
     };
   };
+  programs.tmux = {
+    enable = true;
+    mouse = true;
+    baseIndex = 1;
+    shortcut = "a";
+    extraConfig = ''
+      set-option -g status-position top
+    '';
+    plugins = with pkgs; [
+      tmuxPlugins.sensible
+      tmuxPlugins.vim-tmux-navigator
+      {
+        plugin = tmuxPlugins.rose-pine;
+        extraConfig = ''
+          set -g @rose_pine_variant 'moon'
+          set -g @rose_pine_bar_bg_disable 'on' 
+          set -g @rose_pine_bar_bg_disabled_color_option 'default'
+          set -g @rose_pine_show_pane_directory 'on'
+        '';
+      }
+    ];
+  };
   services.jankyborders.enable = true;
   programs.aerospace = {
     enable = true;
