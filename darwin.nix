@@ -37,7 +37,7 @@
       pkgs.appcleaner 
       pkgs.google-chrome 
       pkgs.obsidian 
-      pkgs._1password-gui
+      # pkgs._1password-gui
       pkgs._1password-cli 
     ];
 
@@ -51,6 +51,7 @@
       "affinity-designer" 
       "affinity-photo" 
       "ghostty" 
+      "1password"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;

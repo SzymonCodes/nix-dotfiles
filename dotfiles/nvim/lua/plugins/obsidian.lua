@@ -10,7 +10,7 @@ return {
     workspaces = {
       {
         name = "Personal",
-        path = "~/Documents/Test",
+        path = "~/Documents/Notes",
       },
     },
     ui = {
