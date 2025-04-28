@@ -1,5 +1,7 @@
 { pkgs, ... }: 
 {
+  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowBroken = true;
   environment.systemPackages =
     [
       # Neovim
@@ -30,6 +32,13 @@
 
       # GUI Applications      
       pkgs.aerospace
+      pkgs.raycast
+      pkgs.spotify
+      pkgs.appcleaner 
+      pkgs.google-chrome 
+      pkgs.obsidian 
+      pkgs._1password-gui
+      pkgs._1password-cli 
     ];
 
   fonts.packages = [
@@ -39,16 +48,9 @@
   homebrew = {
     enable = true;
     casks = [
-      "affinity-designer"
-      "affinity-photo"
-      "ghostty"
-      "1password"
-      "1password-cli"
-      "appcleaner"
-      "google-chrome"
-      "obsidian"
-      "spotify"
-      "raycast"
+      "affinity-designer" 
+      "affinity-photo" 
+      "ghostty" 
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
@@ -62,9 +64,9 @@
     dock.show-recents = false;
     dock.persistent-apps = [
       "/Applications/Ghostty.app"
-      "/Applications/Obsidian.app"
-      "/Applications/Google Chrome.app"
-      "/Applications/Spotify.app"
+      "${pkgs.obsidian}/Applications/Obsidian.app"
+      "${pkgs.google-chrome}/Applications/Google Chrome.app"
+      "${pkgs.spotify}/Applications/Spotify.app"
       "/System/Applications/Music.app"
     ];
     finder.FXPreferredViewStyle = "Nlsv";
