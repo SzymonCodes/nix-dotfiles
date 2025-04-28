@@ -45,7 +45,26 @@
     baseIndex = 1;
     shortcut = "a";
     extraConfig = ''
+      # Refreshing the config
+      unbind r
+      bind r source-file ~/.config/tmux/tmux.conf
+
+      set -g default-terminal "tmux-256color"
+      set -ag terminal-overrides ",xterm-256color:RGB"
       set-option -g status-position top
+
+      set -g default-command /bin/zsh
+      set -g default-shell /bin/zsh
+
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+      bind-key l select-pane -R
+
+      bind-key -r h resize-pane -L 5
+      bind-key -r j resize-pane -D 5
+      bind-key -r k resize-pane -U 5
+      bind-key -r l resize-pane -R 5
     '';
     plugins = with pkgs; [
       tmuxPlugins.sensible
@@ -65,9 +84,6 @@
   programs.aerospace = {
     enable = true;
     userSettings = {
-      after-startup-command = [ 
-        "exec-and-forget borders active_color=0xff58A4B0 inactive_color=0xff494d64 width=5.0"
-      ];
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
       accordion-padding = 30;
