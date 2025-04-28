@@ -4,10 +4,10 @@
     username = "szymon";
     homeDirectory = "/Users/szymon";
     packages = [ ];
-    file."/.config/ghostty/config" = { source = ./dotfiles/.config/ghostty/config; };
-    file."/.config/neofetch/config.conf" = { source = ./dotfiles/.config/neofetch/config.conf; };
-    file."/.config/starship.toml" = { source = ./dotfiles/.config/starship.toml; };
-    file."/.config/nvim" = { source = ./dotfiles/.config/nvim; recursive = true;};
+    file."/.config/ghostty/config" = { source = ./dotfiles/ghostty/config; };
+    file."/.config/neofetch/config.conf" = { source = ./dotfiles/neofetch/config.conf; };
+    file."/.config/starship.toml" = { source = ./dotfiles/starship.toml; };
+    file."/.config/nvim" = { source = ./dotfiles/nvim; recursive = true;};
   };
   xdg.enable = true;
 
