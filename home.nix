@@ -37,6 +37,7 @@
     package = pkgs.gitFull;
     extraConfig = {
       credential.helper = "manager";
+      core.editor = "nvim";
     };
   };
   programs.tmux = {
@@ -95,6 +96,12 @@
       key-mapping = {
         preset = "qwerty";
       };
+      on-window-detected = [
+        {
+          "if".app-name-regex-substring = "Finder";
+          run = "layout floating";
+        }
+      ];
       gaps = {
         inner.horizontal = 10;
         inner.vertical =   10;
@@ -120,21 +127,22 @@
         alt-shift-minus = "resize smart -50";
         alt-shift-equal = "resize smart +50";
 
-        alt-t = "workspace 1";
-        alt-b = "workspace 2";
-        alt-m = "workspace 3";
-        alt-n = "workspace 4";
-        alt-o = "workspace 5";
+        alt-1 = "workspace 1";
+        alt-2 = "workspace 2";
+        alt-3 = "workspace 3";
+        alt-4 = "workspace 4";
+        alt-5 = "workspace 5";
 
-        alt-shift-t = "move-node-to-workspace 1";
-        alt-shift-b = "move-node-to-workspace 2";
-        alt-shift-m = "move-node-to-workspace 3";
-        alt-shift-n = "move-node-to-workspace 4";
-        alt-shift-o = "move-node-to-workspace 5";
+        alt-shift-1 = "move-node-to-workspace 1";
+        alt-shift-2 = "move-node-to-workspace 2";
+        alt-shift-3 = "move-node-to-workspace 3";
+        alt-shift-4 = "move-node-to-workspace 4";
+        alt-shift-5 = "move-node-to-workspace 5";
 
         alt-tab = "workspace-back-and-forth";
         alt-shift-tab = "move-workspace-to-monitor --wrap-around next";
         alt-shift-semicolon = "mode service";
+        alt-shift-w = "mode apps";
       };
       mode.service.binding = {
         esc = [ 
@@ -168,6 +176,24 @@
         ];
         alt-shift-l = [
           "join-with right"
+          "mode main"
+        ];
+      };
+      mode.apps.binding = {
+        alt-t = [
+          "exec-and-forget open -a /Applications/Ghostty.app"
+          "mode main"
+        ];
+        alt-b = [
+          "exec-and-forget open -a ${pkgs.google-chrome}/Applications/Google Chrome.app"
+          "mode main"
+        ];
+        alt-m = [
+          "exec-and-forget open -a /System/Applications/Music.app"
+          "mode main"
+        ];
+        alt-f = [
+          "exec-and-forget open -a /System/Library/CoreServices/Finder.app"
           "mode main"
         ];
       };
