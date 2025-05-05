@@ -31,6 +31,7 @@
       pkgs.git-credential-manager
 
       # GUI Applications      
+      pkgs.sketchybar
       pkgs.aerospace
       pkgs.raycast
       pkgs.spotify

@@ -8,6 +8,7 @@
     file."/.config/neofetch/config.conf" = { source = ./dotfiles/neofetch/config.conf; };
     file."/.config/starship.toml" = { source = ./dotfiles/starship.toml; };
     file."/.config/nvim" = { source = ./dotfiles/nvim; recursive = true;};
+    file."/.config/sketchybar" = { source = ./dotfiles/sketchybar; recursive = true;};
   };
   xdg.enable = true;
 
@@ -85,6 +86,7 @@
   programs.aerospace = {
     enable = true;
     userSettings = {
+      after-startup-command = ["exec-and-forget ${pkgs.sketchybar}/bin/sketchybar"];
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
       accordion-padding = 30;
