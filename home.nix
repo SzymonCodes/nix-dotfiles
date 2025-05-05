@@ -87,6 +87,11 @@
     enable = true;
     userSettings = {
       after-startup-command = ["exec-and-forget ${pkgs.sketchybar}/bin/sketchybar"];
+      exec-on-workspace-change = [
+        "/bin/bash"
+        "-c"
+        "sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE"
+      ];
       enable-normalization-flatten-containers = true;
       enable-normalization-opposite-orientation-for-nested-containers = true;
       accordion-padding = 30;
