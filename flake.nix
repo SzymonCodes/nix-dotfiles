@@ -36,7 +36,7 @@
           {
             nix-homebrew = {
               enable = true;
-              enableRosetta = true;
+              # enableRosetta = true;
               user = "szymon";
               autoMigrate = true;
             }; 
