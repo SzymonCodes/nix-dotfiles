@@ -16,6 +16,7 @@ return {
       local capabilities = require('blink.cmp').get_lsp_capabilities()
       require('lspconfig').lua_ls.setup { capabilities = capabilities }
       require('lspconfig').pyright.setup { capabilities = capabilities }
+      require('lspconfig').marksman.setup { capabilities = capabilities }
 
       -- Formatting
       vim.api.nvim_create_autocmd('LspAttach', {

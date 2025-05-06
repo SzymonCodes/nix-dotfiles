@@ -6,6 +6,7 @@
     [
       # Neovim
       pkgs.lua-language-server
+      pkgs.marksman
       pkgs.pyright
       pkgs.neovim
 

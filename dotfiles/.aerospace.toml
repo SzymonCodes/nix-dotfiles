@@ -68,7 +68,7 @@ automatically-unhide-macos-hidden-apps = false
     inner.vertical =   10
     outer.left =       10
     outer.bottom =     10
-    outer.top =        20
+    outer.top =        10
     outer.right =      10
 
 # 'main' binding mode declaration
@@ -125,11 +125,11 @@ automatically-unhide-macos-hidden-apps = false
     alt-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    alt-1 = 'workspace 1'
-    alt-2 = 'workspace 2'
-    alt-3 = 'workspace 3'
-    alt-4 = 'workspace 4'
-    alt-5 = 'workspace 5'
+    alt-q = 'workspace 1'
+    alt-w = 'workspace 2'
+    alt-e = 'workspace 3'
+    alt-r = 'workspace 4'
+    alt-t = 'workspace 5'
     # alt-6 = 'workspace 6'
     # alt-7 = 'workspace 7'
     # alt-8 = 'workspace 8'
@@ -158,11 +158,11 @@ automatically-unhide-macos-hidden-apps = false
     # alt-z = 'workspace Z'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-4 = 'move-node-to-workspace 4'
-    alt-shift-5 = 'move-node-to-workspace 5'
+    alt-shift-q = 'move-node-to-workspace 1'
+    alt-shift-w = 'move-node-to-workspace 2'
+    alt-shift-e = 'move-node-to-workspace 3'
+    alt-shift-r = 'move-node-to-workspace 4'
+    alt-shift-t = 'move-node-to-workspace 5'
     # alt-shift-6 = 'move-node-to-workspace 6'
     # alt-shift-7 = 'move-node-to-workspace 7'
     # alt-shift-8 = 'move-node-to-workspace 8'
@@ -197,7 +197,8 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
     alt-shift-semicolon = 'mode service'
-    alt-shift-w = 'mode app'
+    alt-shift-f = 'mode app'
+    # alt-shift-w = 'mode writing'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -220,7 +221,10 @@ automatically-unhide-macos-hidden-apps = false
     shift-down = ['volume set 0', 'mode main']
 
 [mode.app.binding]
-  alt-t = ['exec-and-forget open -a /Applications/Ghostty.app', 'mode main']
-  alt-b = ['exec-and-forget open -a ${pkgs.google-chrome}/Applications/Google Chrome.app', 'mode main']
-  alt-m = ['exec-and-forget open -a /System/Applications/Music.app', 'mode main']
-  alt-f = ['exec-and-forget open -a /System/Library/CoreServices/Finder.app', 'mode main']
+    alt-t = ['exec-and-forget open -a /Applications/Ghostty.app', 'mode main']
+    alt-b = ['exec-and-forget open -a ${pkgs.google-chrome}/Applications/Google Chrome.app', 'mode main']
+    alt-m = ['exec-and-forget open -a /System/Applications/Music.app', 'mode main']
+    alt-f = ['exec-and-forget open -a /System/Library/CoreServices/Finder.app', 'mode main']
+
+# [mode.writing.binding]
+#     esc = 'mode main'

@@ -10,16 +10,16 @@ return {
     workspaces = {
       {
         name = "Personal",
-        path = "~/Documents/Notes",
+        path = "~/Documents/Obsidian_Vaults/Zettelkasten",
       },
     },
+    disable_frontmatter = true,
     ui = {
       enable = false,
     },
     templates = {
       folder = "Templates",
-      date_format = "%d-%m-%Y",
-      time_format = "%H-%M",
     },
+    vim.keymap.set("n", "<leader>t", ":ObsidianTemplate<CR>")
   },
 }
