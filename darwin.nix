@@ -8,6 +8,7 @@
       pkgs.lua-language-server
       pkgs.marksman
       pkgs.pyright
+      pkgs.nixd
       pkgs.neovim
 
       # CLIs
@@ -26,6 +27,13 @@
       pkgs.jankyborders
       pkgs.zsh-autosuggestions
       pkgs.zsh-syntax-highlighting
+      pkgs.cava
+      pkgs.fftw
+      pkgs.libtool
+      pkgs.automake
+      pkgs.pkgconf
+      pkgs.portaudio
+      pkgs.iniparser
 
       # Git
       pkgs.git
@@ -55,6 +63,7 @@
       "affinity-photo" 
       "ghostty" 
       "1password"
+      "background-music"
     ];
     onActivation.cleanup = "zap";
     onActivation.autoUpdate = true;
